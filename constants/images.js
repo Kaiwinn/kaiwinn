@@ -28,4 +28,9 @@ export default {
   product: require('../assets/product.png'),
   default: require('../assets/default.png'),
   profile: require('../assets/profile.png'),
+  chat: require('../assets/chat.png'),
+  left_menu: require('../assets/left_menu.png'),
+  find: require('../assets/find.png'),
+  delete: require('../assets/delete.png'),
+  detail: require('../assets/detail.png'),
 }

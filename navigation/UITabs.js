@@ -7,7 +7,7 @@ npm install @react-navigation/native-stack
 **/
 
 import * as React from 'react'
-import { FoodList, Settings, ProductGridView, Profile } from '../screens'
+import { FoodList, Settings, ProductGridView, Profile, Chat } from '../screens'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import {
   StyleSheet,
@@ -48,6 +48,8 @@ const screenOptions = ({ route }) => ({
         ? images.settings
         : screenName == 'Profile'
         ? images.profile
+        : screenName == 'Chat'
+        ? images.chat
         : images.default
     return (
       <Image
@@ -80,6 +82,17 @@ const UITabs = (props) => {
         component={FoodList}
         options={{
           tabBarLabel: 'Food',
+          tabBarLabelStyle: {
+            fontSize: fontSizes.h4,
+            marginBottom: 5,
+          },
+        }}
+      ></Tabs.Screen>
+      <Tabs.Screen
+        name={'Chat'}
+        component={Chat}
+        options={{
+          tabBarLabel: 'Chat',
           tabBarLabelStyle: {
             fontSize: fontSizes.h4,
             marginBottom: 5,

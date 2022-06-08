@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import UITabs from './UITabs'
-import { Welcome, Login, Register } from '../screens'
+import { Welcome, Login, Register, Messenger } from '../screens'
 
 const MyApp = (props) => {
   const Stack = createNativeStackNavigator()
@@ -20,6 +20,7 @@ const MyApp = (props) => {
         <Stack.Screen name={'Login'} component={Login}></Stack.Screen>
         <Stack.Screen name={'Register'} component={Register}></Stack.Screen>
         <Stack.Screen name={'UITabs'} component={UITabs}></Stack.Screen>
+        <Stack.Screen name={'Messenger'} component={Messenger}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   )

@@ -196,9 +196,9 @@ const ProductGridView = () => {
                     if (item.productName == eachProducts.productName) {
                       return {
                         ...eachProducts,
-                        isSave:
-                          eachProducts.isSaved == false ||
-                          eachProducts.isSaved == undefined
+                        isSaved:
+                          eachProducts.isSaved == undefined ||
+                          eachProducts.isSaved == false
                             ? true
                             : false,
                       }
